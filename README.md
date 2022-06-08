@@ -1,0 +1,1 @@
+# automatic-firefox-profiles
