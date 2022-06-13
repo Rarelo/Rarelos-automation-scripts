@@ -1,6 +1,17 @@
-# automatic-firefox-profiles
+# Rarelo's Automation Scripts
 
-The program copies the default profile settings and configuration into any new firefox profile. Only works currently for Linux systems
+This program is a collection of scripts to automate annjoying tasks
 
-Run main.py to execute the program. Will ask for root privileges
-for copying the shortcut into the /usr/share/applications folder.
+Linux Features
+
+1) Automatically create new firefox profiles along with .desktop shortcuts in /usr/share/applications
+
+# Instructions
+
+Linux:
+
+- Run main.py to execute the program. Will ask for root privileges for copying the shortcut into the /usr/share/applications folder.
+
+Windows:
+
+- planned for the future
