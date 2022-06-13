@@ -6,7 +6,7 @@ Linux Features
 
 1) Automatically create new firefox profiles along with .desktop shortcuts in /usr/share/applications
 
-# Instructions
+## Instructions
 
 Linux:
 
