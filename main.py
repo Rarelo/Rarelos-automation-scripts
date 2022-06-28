@@ -78,17 +78,18 @@ def main():
     if operating_system == 'linux':
         directory = linux_get_application_directory()
         #string 1: command, other strings arguments for string 1
-#        subprocess.run(["firefox", "-CreateProfile", str(profile_name)])
-#        #run create-profile.sh w/ argument of profile-name
-#        subprocess.run([directory+'/create-profile.sh',profile_name])
-#        #copy and fix the .desktop shortcut temprarily in the program folder
-#        shortcut_name = str(profile_name)+".desktop"
-#        fix_dot_desktop_file(profile_name,shortcut_name)
-#        #copy the .desktop to the /usr/share/applications/
-#        subprocess.run(["sudo","cp",str(shortcut_name),
-#        "/usr/share/applications/"+str(shortcut_name)])
-#        #remove the old .desktop file from the program directory
-#        subprocess.run(["rm",str(shortcut_name)])
+        subprocess.run(["firefox", "-CreateProfile", str(profile_name)])
+        #run create-profile.sh w/ argument of profile-name
+        subprocess.run([directory+'/create-profile.sh',profile_name])
+        #copy and fix the .desktop shortcut temprarily in the program folder
+        shortcut_name = str(profile_name)+".desktop"
+        fix_dot_desktop_file(profile_name,shortcut_name)
+        #copy the .desktop to the /usr/share/applications/
+        subprocess.run(["sudo","cp",str(shortcut_name),
+        "/usr/share/applications/"+str(shortcut_name)])
+        #remove the old .desktop file from the program directory
+        subprocess.run(["rm",str(shortcut_name)])
 
-## runs the code
+## code body
 main()
+
