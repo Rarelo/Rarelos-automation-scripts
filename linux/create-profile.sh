@@ -1,5 +1,7 @@
 #! /bin/bash
 
+### Go to the firefox application directory and copy the settings from the default profile to the new one
+
 #echo "profile_name: $1";
 #echo "$1";
 
