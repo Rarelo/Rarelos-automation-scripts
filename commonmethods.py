@@ -1,5 +1,3 @@
-#import stuff
-
 ### To contain common methods between both windows and linux code
 
 def get_and_check_user_input(input_message,valid_inputs):

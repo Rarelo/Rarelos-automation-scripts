@@ -2,6 +2,13 @@ import os
 import sys
 import directories
 
+#note to self
+#tried making a shortcut based off of a working profile shortcut and seemed to completly break from the exe line 
+#can't even unbreak it now
+#related website https://www.addictivetips.com/ubuntu-linux-tips/create-application-menu-shortcuts-linux/
+#also the problem that the create shortcut used by both profile and shortcut code so fixing the method 
+#for one script breaks the other 
+
 ## add project subfolders as module locations
 sys.path.insert(0,directories.LINUX)
 sys.path.insert(0,directories.WINDOWS)

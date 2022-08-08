@@ -15,11 +15,13 @@ def create_firefox_profile():
         print("Exiting...")
         return None
     mozilla_create_firefox_profile(profile_name)
-    create_shortcut(profile_name)
+    create_shortcut(profile_name) #current glaring issue that this method needs to be
+    #overhauled to work with both profile and shortcut scripts
 
 def create_linux_shortcut():
     app_name = get_name()
     app_directory = get_other_app_directory()
+    print(app_name, app_directory)
     create_shortcut(app_name,app_directory)
 
 ## firefox profiles 
@@ -35,7 +37,7 @@ def mozilla_create_firefox_profile(profile_name):
 def get_name(): 
     '''get desired profile name from user''' 
     profile_name = commonmethods.get_and_check_user_input( 
-    "Enter Profile Name:",[]) 
+    "Enter Shortcut Name:",[]) 
     if profile_name == None: 
         #print("Exiting2") 
         return None 
@@ -47,6 +49,7 @@ def create_shortcut(name_without_file_extension):
     #copy and fix the .desktop shortcut temprarily in the program folder
     shortcut_name = str(name_without_file_extension)+".desktop"
     create_dot_desktop_file(name_without_file_extension,shortcut_name)
+    #change the program shortcut to the correct exec location
     #copy the .desktop to the /usr/share/applications/
     subprocess.run(["sudo","cp",str(shortcut_name),
     "/usr/share/applications/"+str(shortcut_name)])
@@ -55,7 +58,7 @@ def create_shortcut(name_without_file_extension):
 
 def get_other_app_directory():
     app_directory = commonmethods.get_and_check_user_input(
-    "Enter the exact file path to the desrired application:",[])
+    "Enter the exact file path to the desired application:",[])
     return app_directory
 
 def create_dot_desktop_file(profile_name,shortcut_name): 
