@@ -20,9 +20,14 @@ def create_firefox_profile():
 
 def create_linux_shortcut():
     app_name = get_name()
-    app_directory = get_other_app_directory()
-    print(app_name, app_directory)
-    create_shortcut(app_name,app_directory)
+    #app_directory = get_other_app_directory()
+    #print(app_name, app_directory)
+    #get user confirmation since they will need to add target directory manually
+    output = commonmethods.get_user_confirmation("You will need to manually insert your shortcut's directory into the shortcut file yourself without the help of the script for the shortcut to work, would you still like to proceed?")
+    if output == None:
+        print("Exiting")
+        return None
+    create_shortcut(app_name)
 
 ## firefox profiles 
 def mozilla_create_firefox_profile(profile_name):
