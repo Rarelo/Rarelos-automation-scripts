@@ -18,6 +18,15 @@ def get_and_check_user_input(input_message,valid_inputs):
         print("Error: Please enter a valid input")
         get_and_check_user_input(input_message,valid_inputs)
 
+def get_user_confirmation(input_message):
+    '''get user confiramation and output either a proceed (true) or kill signal'''
+    user_response = get_and_check_user_input(input_message,['y','n'])
+    if user_response == 'y':
+        return True
+    elif user_response == 'n':
+        return None
+    else: print('something has gone wrong with the get_user_confirmation method in commonmethods')
+
 def choose_script(operating_system):
     if operating_system == 'linux':
         chosen_script = get_and_check_user_input( 
